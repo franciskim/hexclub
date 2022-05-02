@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - The Matrix in Sass</title>
+  <title>HexClub.XYZ - Welcome</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css'>
   <link rel="stylesheet" href="./style.css">
   <script>
@@ -17,8 +17,10 @@
       let addy = document.getElementById("addy").value;
       addy = addy.trim().replace(".eth", "");
       if (addy.match("^0[xX][0-9a-fA-F]+$")) {
-        alert("Seems OK!");
-      } else alert("Failed to validate!");
+        alert("Welcome!");
+        document.getElementById('discord').style.display = 'block'
+      }
+      else alert("Failed to validate!");
     }
 
   </script>
@@ -28,19 +30,26 @@
   <div style="position:relative;width:100%;height:100%">
     <div style="position:absolute; top:100px; left:0; right:0; z-index:999;background:rgba(0, 0, 0, 0.7)">
       <h1 style="font-size:36px;color:#fff;">HexClub.xyz</h1><br><br>
-          <div style="font-size:18px;color:#fff;">More rare and punk than digits.<br>
-  Shorten your ETH address to the first 4 or 5 characters.<br>
-            
-           16진 클럽 ⚡️ 十六进制俱乐部 ⚡️ 16進クラブ</div><br><br>
+      <div style="font-size:18px;color:#fff;">More rare and punk than digits.<br>
+        Shorten your ETH address to the first 4 or 5 characters.<br>
+        Validate your .eth ENS address below for entry into the Discord<br>
+        16진 클럽 ⚡️ 十六进制俱乐部 ⚡️ 16進クラブ</div><br><br>
       <div class="flex justify-center">
         <div class="mb-3 xl:w-96">
           <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
-            <input type="search" class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="0x4b.eth" aria-label="Validate" aria-describedby="button-addon3" id="addy">
-            <button class="btn inline-block px-6 py-2 border-2 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-100 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" type="button" id="validate" onclick="validate()">Validate</button>
+            <input type="search"
+              class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="0x4b.eth" aria-label="Validate" aria-describedby="button-addon3" id="addy">
+            <button
+              class="btn inline-block px-6 py-2 border-2 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-100 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              type="button" id="validate" onclick="validate()">Validate</button>
           </div>
         </div>
       </div>
-          <div style="font-size:23px;color:#fff;"><a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> | Discord | How To</div><br><br>
+      <div style="font-size:23px;color:#fff;"><a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> |
+        <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">Discord</a> | </span>How To
+        (coming soon)
+      </div><br><br>
     </div>
     <ul class="matrix">
       <li></li>
@@ -107,8 +116,12 @@
 
     button {
       background: #000 !important;
-      border-color: #32CD32 !improtant;
+      border-color: #32CD32 !important;
       color: #32CD32 !important;
+    }
+
+    #discord {
+      display: none;
     }
 
     .matrix {
@@ -16989,4 +17002,5 @@
     }
   </style>
 </body>
+
 </html>
