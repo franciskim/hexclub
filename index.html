@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -44,8 +48,8 @@
 
   <div style="position:relative;width:100%;height:100%">
     <div style="position:absolute; top:100px; left:0; right:0; z-index:999;background:rgba(0, 0, 0, 0.7)">
-      <h1 style="font-size:36px;color:#fff;">HexClub.XYZ</h1><br><br>
-      <div style="font-size:18px;color:#fff;">More rare and punk than digits.<br>
+      <h1 style="font-size:36px;">HexClub.XYZ</h1><br><br>
+      <div style="font-size:18px;">More rare and punk than digits.<br>
         Shorten your ETH address to the first 5 or 6 characters.<br>
         👉 Validate your .eth ENS address below for entry into the Discord<br><br>
         16진 클럽 ⚡️ 十六进制俱乐部 ⚡️ 16進クラブ</div><br><br>
@@ -61,11 +65,19 @@
           </div>
         </div>
       </div>
-      <div style="font-size:17px;color:#fff;"><a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> |
-        <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">Discord</a> | </span> <button
-          type="button" class="inline-block hexclub" data-bs-toggle="modal" data-bs-target="#hexclubModalCenter"> How to
-        </button>
+      <div style="font-size:12px;clear:both;text-align: center;">(No access to wallet required)</div>
+      <div style="font-size:17px;color:#fff;">
+        <button type="button" class="inline-block hexclub" data-bs-toggle="modal" data-bs-target="#hexclubModalCenter">
+          How to
+        </button> |
+        <a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> |
+        <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">⚡️ Discord ⚡️</a> | </span>
+        <a href="https://github.com/hexclubxyz" target="_blank">GitHub</a> |
+        <a href="#">Ranking & Supply (coming soon)</a>
       </div><br><br>
+      <div style="font-size:12px;clear:both;text-align: center;">Built with ❤️ by <a
+          href="https://twitter.com/FrancisKimETH" target="_blank">0x4b.eth</a> | Simple static page on IPFS deployed
+        through Fleek ⚡️</div>
     </div>
 
     <ul class="matrix">
@@ -124,26 +136,47 @@
 
   <style>
     body {
-      font-family: courier;
+      font-family: 'Roboto Mono', monospace;
       background: black;
+      color: #fff;
       overflow: hidden;
       margin: 0;
       padding: 0;
       text-align: center;
+      line-height: 200% !important;
+    }
+
+    h1 {
+      color: #000;
+      background: #32CD32;
+      font-weight: 700;
+      font-style: italic;
+      display: inline-block;
+      padding: 10px;
     }
 
     a {
       color: #32CD32 !important;
+      font-weight: 700;
     }
 
     button.hexclub {
       background: #000 !important;
       border-color: #32CD32 !important;
       color: #32CD32 !important;
+      font-weight: 700;
     }
 
     #discord {
       display: none;
+    }
+
+    #discord a {
+      text-decoration: underline;
+    }
+
+    .modal {
+      color: #000;
     }
 
     .matrix {
