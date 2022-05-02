@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -61,11 +65,17 @@
           </div>
         </div>
       </div>
+      <div style="font-size:12px;clear:both;text-align: center;">(No access to wallet required)</div>
       <div style="font-size:17px;color:#fff;"><a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> |
-        <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">Discord</a> | </span> <button
-          type="button" class="inline-block hexclub" data-bs-toggle="modal" data-bs-target="#hexclubModalCenter"> How to
+        <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">⚡️ Discord ⚡️</a> | </span>
+        <a href="https://github.com/hexclubxyz" target="_blank">GitHub</a> |
+        <button type="button" class="inline-block hexclub" data-bs-toggle="modal" data-bs-target="#hexclubModalCenter">
+          How to
         </button>
       </div><br><br>
+      <div style="font-size:12px;clear:both;text-align: center;">Built with ❤️ by <a
+          href="https://twitter.com/FrancisKimETH" target="_blank">0x4b.eth</a> | Simple static page on IPFS deployed
+        through Fleek ⚡️</div>
     </div>
 
     <ul class="matrix">
@@ -124,26 +134,39 @@
 
   <style>
     body {
-      font-family: courier;
+      font-family: 'Roboto Mono', monospace;
       background: black;
+      color: #fff;
       overflow: hidden;
       margin: 0;
       padding: 0;
       text-align: center;
+      line-height: 200% !important;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-style: italic;
     }
 
     a {
       color: #32CD32 !important;
+      font-weight: 700;
     }
 
     button.hexclub {
       background: #000 !important;
       border-color: #32CD32 !important;
       color: #32CD32 !important;
+      font-weight: 700;
     }
 
     #discord {
       display: none;
+    }
+
+    #discord a {
+      text-decoration: underline;
     }
 
     .matrix {
