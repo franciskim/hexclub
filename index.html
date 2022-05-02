@@ -5,15 +5,48 @@
   <meta charset="UTF-8">
   <title>HexClub.XYZ - Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+  <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+    id="hexclubModalCenter" tabindex="-1" aria-labelledby="hexclubModalCenterTitle" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none" style="max-width:900px;">
+      <div
+        class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+        <div
+          class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+          <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalScrollableLabel">
+            How to shorten your ETH address
+          </h5>
+        </div>
+        <div class="modal-body relative p-4" style="text-align:left;">
+          1. Get the first 5 characters of your ETH wallet eg: 0x4b8<br>
+          2. Go to <a href="https://app.ens.domains" target="_blank">https://app.ens.domains</a><br>
+          3. Register your shortened address: 0x4b8.eth<br>
+          4. If your first 5 characters are taken, use 6 characters.<br>
+          5. Welcome to the HexClub.<br>
+        </div>
+        <div
+          class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out"
+            data-bs-dismiss="modal" style="color:#000;background-color: #80ff80;">
+            Got it
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div style="position:relative;width:100%;height:100%">
     <div style="position:absolute; top:100px; left:0; right:0; z-index:999;background:rgba(0, 0, 0, 0.7)">
       <h1 style="font-size:36px;color:#fff;">HexClub.XYZ</h1><br><br>
       <div style="font-size:18px;color:#fff;">More rare and punk than digits.<br>
-        Shorten your ETH address to the first 4 or 5 characters.<br>
+        Shorten your ETH address to the first 5 or 6 characters.<br>
         👉 Validate your .eth ENS address below for entry into the Discord<br><br>
         16진 클럽 ⚡️ 十六进制俱乐部 ⚡️ 16進クラブ</div><br><br>
       <div class="flex justify-center">
@@ -23,14 +56,15 @@
               class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="0x4b.eth" aria-label="Validate" aria-describedby="button-addon3" id="addy">
             <button
-              class="btn inline-block px-6 py-2 border-2 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-100 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              class="btn hexclub inline-block px-6 py-2 border-2 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-100 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
               type="button" id="validate" onclick="validate()">Validate</button>
           </div>
         </div>
       </div>
       <div style="font-size:17px;color:#fff;"><a href="https://twitter.com/HexClubXYZ" target="_blank">Twitter</a> |
         <span id="discord"><a href="https://discord.com/invite/3y8xUv3bPB" target="_blank">Discord</a> | </span> <button
-          style="display:inline-block" data-modal-toggle="defaultModal">How To</button>
+          type="button" class="inline-block hexclub" data-bs-toggle="modal" data-bs-target="#hexclubModalCenter"> How to
+        </button>
       </div><br><br>
     </div>
 
@@ -87,49 +121,7 @@
       <li></li>
     </ul>
   </div>
-  <div id="defaultModal" tabindex="-1" aria-hidden="true"
-    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-      <!-- Modal content -->
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-        <!-- Modal header -->
-        <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-            Terms of Service
-          </h3>
-          <button type="button"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-            data-modal-toggle="defaultModal">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-        <!-- Modal body -->
-        <div class="p-6 space-y-6">
-          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-            With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
-            companies around the world are updating their terms of service agreements to comply.
-          </p>
-          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant
-            to ensure a common set of data rights in the European Union. It requires organizations to notify users as
-            soon as possible of high-risk data breaches that could personally affect them.
-          </p>
-        </div>
-        <!-- Modal footer -->
-        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-          <button data-modal-toggle="defaultModal" type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
-            accept</button>
-          <button data-modal-toggle="defaultModal" type="button"
-            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <style>
     body {
       font-family: courier;
@@ -140,7 +132,11 @@
       text-align: center;
     }
 
-    button {
+    a {
+      color: #32CD32 !important;
+    }
+
+    button.hexclub {
       background: #000 !important;
       border-color: #32CD32 !important;
       color: #32CD32 !important;
@@ -17044,8 +17040,8 @@
       }
       else alert("Failed to validate!");
     }
-
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
 </html>
